@@ -1,10 +1,12 @@
 FROM ubuntu:latest
-ENV FLAG=$FLAG_1
-RUN touch /home/ubuntu/hello.txt
-RUN echo "comething" >> /home/ubuntu/flag.txt
+ARG FLAG
 RUN apt update && apt install  openssh-server sudo -y 
 RUN useradd -rm -d /home/ubuntu -s /bin/bash -g root -G sudo -u 1000 test 
 RUN  echo 'test:test' | chpasswd
-RUN service ssh start
+
+RUN touch /home/ubuntu/flag.txt
+RUN echo $FLAG > /home/ubuntu/flag.txt
+
 EXPOSE 22
+RUN service ssh start
 CMD ["/usr/sbin/sshd","-D"]

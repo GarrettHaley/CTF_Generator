@@ -15,13 +15,15 @@ function get_number_of_challenges(){
 }
 
 function get_flags(){
-    echo "enter your flags in the following format: _flag{this_is_an_example_flag}"
+    echo "enter your flags in the following format: flag_{this_is_an_example_flag}"
+    set -a
     for ((i = 1;i<=num_challenges;i++)); do
         declare -n flag_name_ref="FLAG_$i"
         read -p "Enter flag #$i: " flag_name_ref
         validate_user_input $flag_name_ref
         echo "flag #$i set to: ${flag_name_ref}"
     done
+    set +a
     echo "flags have been created successfully!"
 }
 
@@ -42,7 +44,8 @@ function build_images(){
             echo "try again after this challenge directory has been added."
             kill -INT $$
         fi
-        docker build -t challenge_image_$i ./challenge_$i
+        declare -n flag_name_ref="FLAG_$i"
+        docker build -t challenge_image_$i --build-arg FLAG=$flag_name_ref ./challenge_$i
         echo "## CHALLENGE IMAGE $i CREATED ##"
     done
     echo -e "\n\n## CHALLENGE IMAGES BUILT SUCCESSFULLY! ##"
