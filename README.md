@@ -7,7 +7,7 @@
 # Building challenges
 ---
 ##### Each challenge should exist within this repository. To clone this repository locally, issue the following commands:
-    git clone https://github.com/GarrettHaley/CTF_Generator.git
+    git clone https://github.com/ongthao/CTF_Generator.git
     cd CTF_Generator.git
 ##### Once you have cloned and entered the repository, you can create a new challenge by running the following:
     mkdir challenge_x #(where x is the challenge you wish to create)
