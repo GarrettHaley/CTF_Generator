@@ -1,13 +1,15 @@
-![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
-# MCTSSA CTF Generator 8-) 
-
-##### The purpose of this project is to streamline the process of developing local and public CTF competitions for the Department of Defense. This project can instantiate local instances of __[CTFD](https://hub.docker.com/r/ctfd/ctfd/)__, create docker images/containers for challenges located in this repository, and optionally push those to the remote __[CTFD remote hosting service](https://ctfd.io/hosting/)__ for public competitions.
+# MCTSSA CTF Generator :boom:
+[![Code style: size](https://img.shields.io/github/repo-size/GarrettHaley/CTF_Generator)](https://img.shields.io/github/repo-size/deptofdefense/solo)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Code style: open issue](https://img.shields.io/github/issues-raw/GarrettHaley/CTF_Generator)](https://img.shields.io/github/issues-raw/GarrettHaley/CTF_Generator)
+[![Code style: open pull request](https://img.shields.io/github/issues-pr-raw/GarrettHaley/CTF_Generator)](https://img.shields.io/github/issues-pr-raw/GarrettHaley/CTF_Generator)
+##### The purpose of this project is to encourage cyber CTF challenges within the Marine Corps, and streamline the process of developing local/public CTF competitions for the Department of Defense. This project can instantiate local instances of __[CTFD](https://hub.docker.com/r/ctfd/ctfd/)__, create docker images/containers for challenges located in this repository, and optionally push those to the remote __[CTFD remote hosting service](https://ctfd.io/hosting/)__ for public competitions.
 
 ---
 # Building challenges
 ---
 ##### Each challenge should exist within this repository. To clone this repository locally, issue the following commands:
-    git clone https://github.com/ongthao/CTF_Generator.git
+    git clone https://github.com/GarrettHaley/CTF_Generator.git
     cd CTF_Generator.git
 ##### Once you have cloned and entered the repository, you can create a new challenge by running the following:
     mkdir challenge_x #(where x is the challenge you wish to create)
@@ -37,4 +39,3 @@ The repository can currently be run as is if you like the current challenges. Fe
 __Contributors :)__
 - __[Ong Thao](https://github.com/ongthao)__ - Developer
 - __[Garrett Haley](https://github.com/GarrettHaley)__ - Developer
----
